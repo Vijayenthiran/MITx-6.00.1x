@@ -13,8 +13,9 @@ import random
 import string
 
 
-
-WORDLIST_FILENAME = "C:\Users\Vijayenthiran\Documents\MITx_6.00.1x_Files\Problem_Set_3\words.txt"
+#enter the path of the word.txt which contains some 56000 words for the game.
+#Make sure your folder name doesn't starts with number
+WORDLIST_FILENAME = "C:\Users\Vijayenthiran\Documents\GitHub\MITx_6.00.1x_Files\Problem_Set_3\Hangman\words.txt"
 
 def loadWords():
     """
