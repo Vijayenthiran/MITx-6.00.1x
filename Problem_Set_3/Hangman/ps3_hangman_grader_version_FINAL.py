@@ -103,7 +103,7 @@ def isAlreadyGuessed_(secretWord, lettersGuessed, availableLetter,numberOfGuesse
 
     
 
-def hangman(secretWord, numberOfGuesses = 8 , lettersGuessed = "",availableLetters = string.ascii_lowercase, firstTime = 1):
+def hangman(secretWord, numberOfGuesses = 8 , lettersGuessed = "",availableLetters = string.ascii_lowercase, firstTime = 1): #used default value in the functions..
     '''
     secretWord: string, the secret word to guess.
 
@@ -136,16 +136,16 @@ def hangman(secretWord, numberOfGuesses = 8 , lettersGuessed = "",availableLette
         print "You have " +str(8)+ " guesses left."
         print "Available letters: " + string.ascii_lowercase
         
-    elif numberOfGuesses == 8 and _getGuessedWord(secretWord, lettersGuessed) != secretWord:
+    elif numberOfGuesses == 8 and _getGuessedWord(secretWord, lettersGuessed) != secretWord: #if the first guess word is correct it will enter this loop
                
         print "You have " +str(8)+ " guesses left."        
         print "Available letters: " + availableLetters
         
     elif numberOfGuesses!=0:
-        if _getGuessedWord(secretWord, lettersGuessed) == secretWord:
+        if _getGuessedWord(secretWord, lettersGuessed) == secretWord: #winning condition
             #print "-----------"
             print "Congratulations, you won!"
-            return None
+            return None #Base case for the recurssion function
             
         print "You have " +str(numberOfGuesses)+ " guesses left."
         print "Available letters: " + availableLetters
@@ -187,7 +187,7 @@ def hangman(secretWord, numberOfGuesses = 8 , lettersGuessed = "",availableLette
                 print "-----------"
                 availableLetters = getAvailableLetters_(secretWord, lettersGuessed, availableLetters)
                 
-        hangman(secretWord, numberOfGuesses -1, lettersGuessed,availableLetters,0)
+        hangman(secretWord, numberOfGuesses -1, lettersGuessed,availableLetters,0) #recursion function. Note that the number of guesses is reduced by one, the letter guessed and availble letter will be changed, 0 represents not first time.
         
 
 
