@@ -22,7 +22,7 @@ SCRABBLE_LETTER_VALUES = {
 # Helper code
 # (you don't need to understand this helper code)
 
-WORDLIST_FILENAME = "C:\Users\Vijayenthiran\Documents\GitHub\MITx_6.00.1x_Files\Problem_Set_4\words.txt"
+WORDLIST_FILENAME = "C:\Users\Vijayenthiran\Documents\GitHub\MITx_6.00.1x_Files\Problem_Set_4\words.txt" #this need to be changed depending upon the location of the word text file
 
 def loadWords():
     """
@@ -289,7 +289,7 @@ def playGame(wordList):
     #print "playGame not yet implemented." # <-- Remove this line when you code the function
     
     playGame = 1
-    HAND_SIZE = 7
+    HAND_SIZE = 7 #Hand size is user defined and can be any value..
     while (playGame > 0):       
         choice=raw_input ("Enter n to deal a new hand, r to replay the last hand, or e to end game: ")
         if choice == "e":
